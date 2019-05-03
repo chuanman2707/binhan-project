@@ -135,14 +135,14 @@ const Project = ({
           >
             <Box mx={1} fontSize={5}>
               <SocialLink
-                name="Check repository"
-                fontAwesomeIcon="github"
+                name="Check Rates"
+                fontAwesomeIcon="hotel"
                 url={repositoryUrl}
               />
             </Box>
             <Box mx={1} fontSize={5}>
               <SocialLink
-                name="See project"
+                name="Rooms"
                 fontAwesomeIcon="globe"
                 url={projectUrl}
               />
@@ -167,21 +167,21 @@ const Project = ({
 );
 
 Project.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  projectUrl: PropTypes.string.isRequired,
-  repositoryUrl: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  publishedDate: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  projectUrl: PropTypes.string,
+  repositoryUrl: PropTypes.string,
+  type: PropTypes.string,
+  publishedDate: PropTypes.string,
   logo: PropTypes.shape({
     image: PropTypes.shape({
       src: PropTypes.string,
     }),
-  }).isRequired,
+  }),
 };
 
 const Projects = () => (
-  <Section.Container id="projects" Background={Background}>
+  <Section.Container id="rooms" Background={Background}>
     <Section.Header name="Rooms" icon="" Box="notebook" />
     <StaticQuery
       query={graphql`
