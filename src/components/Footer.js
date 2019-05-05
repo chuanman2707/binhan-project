@@ -5,14 +5,14 @@ import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
 import ContentfulLogo from './Logo/Contenful.svg';
 import GatsbyLogo from './Logo/Gatsby.svg';
+import Section from './Section';
 
 const FooterContainer = styled.footer`
-  padding: 1em;
+  padding: 2em;
   background: ${props => props.theme.colors.primaryDark};
   color: ${props => props.theme.colors.background};
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: column;
+  display: auto;
+
   justify-content: center;
   align-items: center;
 `;
@@ -27,55 +27,22 @@ const RenponsiveLogo = styled.img`
   }
 `;
 
-const Logo = ({ url, logo, alt = '' }) => (
-  <Box>
-    <a href={url} rel="noopener noreferrer" target="_blank">
-      <RenponsiveLogo src={logo} alt={alt} />
-    </a>
-  </Box>
-);
 
-Logo.propTypes = {
-  url: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
-  alt: PropTypes.string,
-};
+const Info = (props) => (
+  <p>{props.info}</p>
+)
 
 const Footer = () => (
+
   <FooterContainer>
     <Fade bottom>
-      <span>
-        <Text
-          mb={2}
-          pb={1}
-          style={{
-            textTransform: 'uppercase',
-            borderBottom: 'white 3px solid',
-            display: 'table',
-          }}
-        >
-          Powered By
-        </Text>
-      </span>
-      <Flex justifyContent="center" alignItems="center">
-        <Logo
-          url="https://www.contentful.com/"
-          logo={ContentfulLogo}
-          alt="Powered by Contentful"
-        />
-        <Text m={2} fontSize={4}>
-          <span role="img" aria-label="heart">
-            ❤️
-          </span>
-        </Text>
-        <Logo
-          url="https://www.gatsbyjs.org/"
-          logo={GatsbyLogo}
-          alt="Gatsby Logo"
-        />
-      </Flex>
+      <Info info="Email: Binhanhotel28@yahoo.com" />
+      <Info info="Phone: +84931797370" />
+      <Info info="Address: 102 Hoang Hoa Tham, Nha Trang, Khanh Hoa" />
+      
     </Fade>
   </FooterContainer>
+
 );
 
 export default Footer;
