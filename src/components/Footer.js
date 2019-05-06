@@ -37,7 +37,7 @@ const Footer = () => (
   <FooterContainer>
     <Fade bottom>
       <Info info="Email: Binhanhotel28@yahoo.com" />
-      <Info info="Phone: +84931797370" />
+      <Info info="Phone: +84905703932, +842583523181" />
       <Info info="Address: 102 Hoang Hoa Tham, Nha Trang, Khanh Hoa" />
       
     </Fade>
